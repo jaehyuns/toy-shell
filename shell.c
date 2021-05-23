@@ -39,10 +39,10 @@ int main(void)
         char exit_1[] ="exit";
         char clear_1[]="clear";
         char pwd_1[]="pwd";
-	      char ls_1[] = "ls";
+	char ls_1[] = "ls";
         char cp_1[]="cp";
         char cd_1[]="cd";
-	      memset(hostname, 0x00, sizeof(hostname));
+	memset(hostname, 0x00, sizeof(hostname));
         gethostname(hostname, LEN_HOSTNAME);
         printf("\033[1;33m%s@%s:%s$\033[66m", getpwuid(getuid())->pw_name, hostname,cwd);
         s = fgets(command, MAX_LEN_LINE, stdin);
